@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "nfc",
+  "version": "${version}",
+
+  "name": "New Frontier Craft",
+  "description": "New Frontier Craft is a mod being developed for Beta 1.7.3, starting on the 27th of April in 2014 and continuing to today. This mod adds in a multitude of new ores, reformats the tool tier system, and overall adds and tweaks a lot of the in-game mechanics.",
+  "authors": [
+    "Zowja",
+    "Roadhog360",
+    "Logan"
+  ],
+  "contact": {
+    "homepage": "https://newfrontiercraft.net/thread/51/front-page",
+    "sources": "https://github.com/LO6AN/New-Frontier-Craft"
+  },
+
+  "license": "None Currently",
+  "icon": "assets/nfc/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "stationloader:mod_event_bus": [
+      "net.newfrontiercraft.nfc.NFC"
+    ]
+  },
+  "mixins": [
+    "nfc.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3",
+    "stationloader": ">=2.0"
+  }
+}

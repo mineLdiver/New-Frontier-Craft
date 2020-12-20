@@ -1,0 +1,3 @@
+[submodule "StationLoader"]
+	path = StationLoader
+	url = https://github.com/ModificationStation/StationLoader
