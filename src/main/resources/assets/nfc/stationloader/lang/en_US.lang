@@ -3,3 +3,4 @@ gui.brickOven=Brick Oven
 
 # Blocks
 tile.brickOven.name=Brick Oven
+tile.fakeBedrock.name=Fake Bedrock

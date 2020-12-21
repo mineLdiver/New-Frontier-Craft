@@ -16,6 +16,7 @@ public class Blocks {
         ModID modID = data.getModID();
         BRICK_OVEN = registry.register(ID -> new BrickOven(ID, false), Identifier.of(modID, "brick_oven")).setHardness(5).sounds(BlockBase.STONE_SOUNDS).setName("brickOven").disableNotifyOnMetaDataChange();
         BRICK_OVEN_LIT = registry.register(ID -> new BrickOven(ID, true), Identifier.of(modID, "brick_oven_lit")).setHardness(5).sounds(BlockBase.STONE_SOUNDS).setName("brickOven");
+        FAKE_BEDROCK = registry.register(ID -> new Ore(ID, BlockBase.BEDROCK.texture), Identifier.of(modID, "fake_bedrock")).setHardness(1).setBlastResistance(10).setName("fakeBedrock");
     }
 
     public static void setDefaultTextures() {
@@ -24,5 +25,6 @@ public class Blocks {
 
     public static BlockBase
             BRICK_OVEN,
-            BRICK_OVEN_LIT;
+            BRICK_OVEN_LIT,
+            FAKE_BEDROCK;
 }
