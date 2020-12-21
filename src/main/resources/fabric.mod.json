@@ -21,7 +21,13 @@
   "environment": "*",
   "entrypoints": {
     "stationloader:mod_event_bus": [
-      "net.newfrontiercraft.nfc.NFC"
+      "net.newfrontiercraft.nfc.NFC",
+      "net.newfrontiercraft.nfc.block.Blocks",
+      "net.newfrontiercraft.nfc.gui.GUIs"
+    ],
+    "stationloader:game_event_bus": [
+      "net.newfrontiercraft.nfc.texture.Textures",
+      "net.newfrontiercraft.nfc.tileentity.TileEntities"
     ]
   },
   "mixins": [
