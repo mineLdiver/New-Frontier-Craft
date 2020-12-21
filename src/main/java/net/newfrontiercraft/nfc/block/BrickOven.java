@@ -12,8 +12,10 @@ import net.minecraft.level.Level;
 import net.minecraft.level.TileView;
 import net.minecraft.tileentity.TileEntityBase;
 import net.minecraft.util.maths.MathHelper;
+import net.modificationstation.stationloader.api.common.gui.GuiHelper;
+import net.modificationstation.stationloader.api.common.registry.Identifier;
 import net.modificationstation.stationloader.api.common.util.BlockFaces;
-import net.newfrontiercraft.nfc.gui.GUIs;
+import net.newfrontiercraft.nfc.NFC;
 import net.newfrontiercraft.nfc.texture.Textures;
 
 import java.util.Random;
@@ -130,7 +132,8 @@ public class BrickOven extends BlockWithEntity {
 
     @Override
     public boolean canUse(Level level, int x, int y, int z, PlayerBase player) {
-        GUIs.open(level, x, y, z, player, net.newfrontiercraft.nfc.tileentity.BrickOven.class);
+        net.newfrontiercraft.nfc.tileentity.BrickOven brickOven = (net.newfrontiercraft.nfc.tileentity.BrickOven) level.getTileEntity(x, y, z);
+        GuiHelper.INSTANCE.openGUI(player, Identifier.of(NFC.MOD_ID, "brick_oven"), brickOven, new net.newfrontiercraft.nfc.container.BrickOven(player.inventory, brickOven));
         return true;
     }
 
@@ -204,7 +207,7 @@ public class BrickOven extends BlockWithEntity {
         super.onBlockRemoved(level, x, y, z);
     }
 
-    private Random rand;
+    private final Random rand;
     private final boolean lit;
     private static boolean SETTING_TILE = false;
 }
