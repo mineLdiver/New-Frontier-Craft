@@ -17,6 +17,7 @@ public class Textures {
         Blocks.BRICK_OVEN_FACE_LIT = factory.addTexture(terrain, Blocks.path + "brick_oven_face_lit.png");
         Blocks.RECORD_CROP_STAGE_0 = factory.addTexture(terrain, Blocks.path + "record_crop_stage_0.png");
         Blocks.RECORD_CROP_STAGE_1 = factory.addTexture(terrain, Blocks.path + "record_crop_stage_1.png");
+        Blocks.PEBBLE = factory.addTexture(terrain, Blocks.path + "pebble.png");
         net.newfrontiercraft.nfc.block.Blocks.setDefaultTextures();
     }
 
@@ -29,6 +30,7 @@ public class Textures {
                 BRICK_OVEN,
                 BRICK_OVEN_FACE_LIT,
                 RECORD_CROP_STAGE_0,
-                RECORD_CROP_STAGE_1;
+                RECORD_CROP_STAGE_1,
+                PEBBLE;
     }
 }
