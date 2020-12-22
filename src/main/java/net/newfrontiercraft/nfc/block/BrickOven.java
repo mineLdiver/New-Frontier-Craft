@@ -133,7 +133,7 @@ public class BrickOven extends BlockWithEntity {
     @Override
     public boolean canUse(Level level, int x, int y, int z, PlayerBase player) {
         net.newfrontiercraft.nfc.tileentity.BrickOven brickOven = (net.newfrontiercraft.nfc.tileentity.BrickOven) level.getTileEntity(x, y, z);
-        GuiHelper.INSTANCE.openGUI(player, Identifier.of(NFC.MOD_ID, "brick_oven"), brickOven, new net.newfrontiercraft.nfc.container.BrickOven(player.inventory, brickOven));
+        GuiHelper.INSTANCE.openGUI(player, Identifier.of(NFC.MODID, "brick_oven"), brickOven, new net.newfrontiercraft.nfc.container.BrickOven(player.inventory, brickOven));
         return true;
     }
 

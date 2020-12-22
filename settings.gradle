@@ -1,2 +1,4 @@
 include "stationloader"
 project(":stationloader").projectDir = file("StationLoader")
+include "howmanyitems"
+project(":howmanyitems").projectDir = file("HowManyItems-Fabric-Unofficial")

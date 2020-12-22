@@ -1,3 +1,6 @@
 [submodule "StationLoader"]
 	path = StationLoader
 	url = https://github.com/ModificationStation/StationLoader
+[submodule "HowManyItems-Fabric-Unofficial"]
+	path = HowManyItems-Fabric-Unofficial
+	url = https://github.com/calmilamsy/HowManyItems-Fabric-Unofficial

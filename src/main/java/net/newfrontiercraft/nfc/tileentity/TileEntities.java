@@ -9,6 +9,6 @@ public class TileEntities {
 
     @Subscribe
     public void onTileEntitiesRegister(TileEntityRegister.Data data) {
-        data.register(BrickOven.class, Identifier.of(NFC.MOD_ID, "brick_oven").toString());
+        data.register(BrickOven.class, Identifier.of(NFC.MODID, "brick_oven").toString());
     }
 }
