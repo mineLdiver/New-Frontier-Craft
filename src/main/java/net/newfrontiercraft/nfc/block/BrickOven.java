@@ -1,8 +1,6 @@
 package net.newfrontiercraft.nfc.block;
 
 import net.minecraft.block.BlockBase;
-import net.minecraft.block.BlockSounds;
-import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Item;
 import net.minecraft.entity.Living;
@@ -13,6 +11,7 @@ import net.minecraft.level.TileView;
 import net.minecraft.tileentity.TileEntityBase;
 import net.minecraft.util.maths.MathHelper;
 import net.modificationstation.stationloader.api.common.gui.GuiHelper;
+import net.modificationstation.stationloader.api.common.preset.block.BlockWithEntity;
 import net.modificationstation.stationloader.api.common.registry.Identifier;
 import net.modificationstation.stationloader.api.common.util.BlockFaces;
 import net.newfrontiercraft.nfc.NFC;
@@ -22,30 +21,10 @@ import java.util.Random;
 
 public class BrickOven extends BlockWithEntity {
 
-    protected BrickOven(int ID, boolean lit) {
-        super(ID, Material.STONE);
+    public BrickOven(Identifier identifier, boolean lit) {
+        super(identifier, Material.STONE);
         rand = new Random();
         this.lit = lit;
-    }
-
-    @Override
-    public BrickOven setHardness(float hardness) {
-        return (BrickOven) super.setHardness(hardness);
-    }
-
-    @Override
-    public BrickOven sounds(BlockSounds sounds) {
-        return (BrickOven) super.sounds(sounds);
-    }
-
-    @Override
-    public BrickOven setName(String string) {
-        return (BrickOven) super.setName(string);
-    }
-
-    @Override
-    public BrickOven disableNotifyOnMetaDataChange() {
-        return (BrickOven) super.disableNotifyOnMetaDataChange();
     }
 
     @Override

@@ -1,32 +1,23 @@
 package net.newfrontiercraft.nfc.block;
 
 import net.minecraft.block.BlockBase;
-import net.minecraft.block.Plant;
 import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.render.TileRenderer;
 import net.minecraft.level.Level;
 import net.minecraft.level.TileView;
 import net.modificationstation.stationloader.api.client.model.BlockWithWorldRenderer;
+import net.modificationstation.stationloader.api.common.preset.block.Plant;
+import net.modificationstation.stationloader.api.common.registry.Identifier;
 import net.newfrontiercraft.nfc.texture.Textures;
 
 import java.util.Random;
 
 public class RecordCrops extends Plant implements BlockWithWorldRenderer {
 
-    protected RecordCrops(int id, int texture) {
-        super(id, texture);
+    public RecordCrops(Identifier identifier, int texture) {
+        super(identifier, texture);
         float f = 0.5F;
         setBoundingBox(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, 0.25F, 0.5F + f);
-    }
-
-    @Override
-    protected RecordCrops setHardness(float hardness) {
-        return (RecordCrops) super.setHardness(hardness);
-    }
-
-    @Override
-    protected RecordCrops setBlastResistance(float resistance) {
-        return (RecordCrops) super.setBlastResistance(resistance);
     }
 
     @Override

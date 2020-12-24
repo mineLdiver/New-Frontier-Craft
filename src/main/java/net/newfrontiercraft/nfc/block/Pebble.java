@@ -1,30 +1,15 @@
 package net.newfrontiercraft.nfc.block;
 
-import net.minecraft.block.BlockSounds;
-import net.minecraft.block.Sand;
 import net.minecraft.level.Level;
+import net.modificationstation.stationloader.api.common.preset.block.Sand;
+import net.modificationstation.stationloader.api.common.registry.Identifier;
 
 import java.util.Random;
 
 public class Pebble extends Sand {
 
-    public Pebble(int i, int j) {
-        super(i, j);
-    }
-
-    @Override
-    protected Pebble setHardness(float hardness) {
-        return (Pebble) super.setHardness(hardness);
-    }
-
-    @Override
-    protected Pebble setBlastResistance(float resistance) {
-        return (Pebble) super.setBlastResistance(resistance);
-    }
-
-    @Override
-    protected Pebble sounds(BlockSounds sounds) {
-        return (Pebble) super.sounds(sounds);
+    public Pebble(Identifier identifier, int j) {
+        super(identifier, j);
     }
 
     @Override
